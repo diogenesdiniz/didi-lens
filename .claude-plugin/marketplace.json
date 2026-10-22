@@ -1,6 +1,9 @@
 {
   "name": "didi-lens",
-  "owner": { "name": "diogenesdiniz" },
+  "description": "Plugins pessoais para o Claude Code.",
+  "owner": {
+    "name": "diogenesdiniz"
+  },
   "plugins": [
     {
       "name": "didi-trace",
