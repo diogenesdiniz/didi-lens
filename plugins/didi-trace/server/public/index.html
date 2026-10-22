@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>didi-trace</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header id="topbar">
+  <strong class="brand">didi-trace</strong>
+  <div id="toolbar" hidden>
+    <span class="group" role="group" aria-label="Filtros de etapa">
+      <label><input type="checkbox" id="f-text" checked> texto</label>
+      <label><input type="checkbox" id="f-thinking" checked> raciocínio</label>
+      <label><input type="checkbox" id="f-tool" checked> ferramentas</label>
+      <label><input type="checkbox" id="f-errors"> só erros</label>
+    </span>
+    <span class="group" role="group" aria-label="Expandir e recolher">
+      <button type="button" id="b-collapse">recolher até turnos</button>
+      <button type="button" id="b-turns">expandir turnos</button>
+      <button type="button" id="b-expand">expandir tudo</button>
+    </span>
+    <span class="group">
+      <label><input type="checkbox" id="f-follow"> acompanhar</label>
+    </span>
+    <span class="group search">
+      <input type="search" id="q" placeholder="Buscar na sessão ( / )" aria-label="Buscar na sessão" autocomplete="off">
+      <button type="button" id="q-prev" aria-label="Ocorrência anterior">&lsaquo;</button>
+      <button type="button" id="q-next" aria-label="Próxima ocorrência">&rsaquo;</button>
+      <span id="q-count" aria-live="polite"></span>
+    </span>
+  </div>
+  <span id="conn" aria-live="polite"></span>
+  <button type="button" id="b-help" aria-label="Atalhos de teclado">?</button>
+</header>
+<div id="layout">
+  <nav id="side" aria-label="Navegação">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="tab-sessions" aria-selected="true">Sessões</button>
+      <button type="button" role="tab" id="tab-outline" aria-selected="false">Sumário</button>
+    </div>
+    <div id="pane-sessions" role="tabpanel">
+      <input type="search" id="sq" placeholder="Filtrar sessões" aria-label="Filtrar sessões" autocomplete="off">
+      <div id="sessions"></div>
+    </div>
+    <div id="pane-outline" role="tabpanel" hidden></div>
+  </nav>
+  <main id="main">
+    <div id="crumbs" aria-label="Localização" hidden></div>
+    <div id="head"></div>
+    <div id="timeline" role="tree" aria-label="Linha do tempo da sessão"></div>
+    <div id="empty"></div>
+  </main>
+</div>
+<div id="help" role="dialog" aria-modal="true" aria-label="Atalhos de teclado" hidden>
+  <div class="sheet">
+    <h2>Atalhos de teclado</h2>
+    <table>
+      <tr><td><kbd>&darr;</kbd> <kbd>j</kbd></td><td>próximo item visível</td></tr>
+      <tr><td><kbd>&uarr;</kbd> <kbd>k</kbd></td><td>item anterior</td></tr>
+      <tr><td><kbd>Shift</kbd>+<kbd>j</kbd> / <kbd>Shift</kbd>+<kbd>k</kbd></td><td>próximo / anterior item do mesmo nível</td></tr>
+      <tr><td><kbd>&rarr;</kbd> <kbd>l</kbd></td><td>expandir; se já expandido, entrar no primeiro filho</td></tr>
+      <tr><td><kbd>&larr;</kbd> <kbd>h</kbd></td><td>recolher; se já recolhido, subir ao item pai</td></tr>
+      <tr><td><kbd>Enter</kbd> <kbd>Espaço</kbd></td><td>expandir ou recolher o item</td></tr>
+      <tr><td><kbd>e</kbd> / <kbd>c</kbd></td><td>expandir / recolher o item e tudo abaixo dele</td></tr>
+      <tr><td><kbd>n</kbd> / <kbd>N</kbd></td><td>próximo / anterior erro</td></tr>
+      <tr><td><kbd>/</kbd></td><td>focar a busca</td></tr>
+      <tr><td><kbd>.</kbd> / <kbd>,</kbd></td><td>próxima / anterior ocorrência da busca</td></tr>
+      <tr><td><kbd>f</kbd></td><td>ligar ou desligar o modo acompanhar</td></tr>
+      <tr><td><kbd>y</kbd></td><td>copiar o conteúdo do item</td></tr>
+      <tr><td><kbd>g</kbd> / <kbd>G</kbd></td><td>ir ao primeiro / último item</td></tr>
+      <tr><td><kbd>Esc</kbd></td><td>fechar esta ajuda ou sair da busca</td></tr>
+    </table>
+    <button type="button" id="help-close">Fechar</button>
+  </div>
+</div>
+<script src="/format.js"></script>
+<script src="/transcript.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
