@@ -1,0 +1,7 @@
+{"_recv":1768039200000,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"SessionStart","source":"startup"}
+{"_recv":1768039200500,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"UserPromptSubmit","prompt":"Corrija"}
+{"_recv":1768039207000,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"PreToolUse","tool_name":"Bash","tool_use_id":"toolu_test","tool_input":{"command":"npm test"}}
+{"_recv":1768039211000,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"PostToolUseFailure","tool_name":"Bash","tool_use_id":"toolu_test"}
+{"_recv":1768039231000,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"PreToolUse","tool_name":"Bash","tool_use_id":"toolu_pending","tool_input":{"command":"sleep 100"}}
+{"_recv":1768039232000,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"PermissionRequest","tool_name":"Bash","tool_use_id":"toolu_pending"}
+{"_recv":1768039233000,"session_id":"bbbbbbbb-0000-4000-8000-000000000002","hook_event_name":"Notification","message":"Claude needs your permission to use Bash","notification_type":"permission_prompt"}
