@@ -1,0 +1,12 @@
+{
+  "name": "didi-lens",
+  "owner": { "name": "diogenesdiniz" },
+  "plugins": [
+    {
+      "name": "didi-trace",
+      "source": "./plugins/didi-trace",
+      "description": "Dashboard local para inspecionar em detalhe, e ao vivo, as sessões do Claude Code.",
+      "version": "0.1.0"
+    }
+  ]
+}

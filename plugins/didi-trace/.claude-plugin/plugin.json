@@ -1,0 +1,8 @@
+{
+  "name": "didi-trace",
+  "displayName": "Didi Trace",
+  "version": "0.1.0",
+  "description": "Dashboard local para inspecionar em detalhe, e ao vivo, as sessões do Claude Code: etapas, ferramentas, subagentes, tempos e tokens.",
+  "author": { "name": "diogenesdiniz" },
+  "keywords": ["dashboard", "observabilidade", "transcript", "hooks"]
+}

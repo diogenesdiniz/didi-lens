@@ -1,0 +1,9 @@
+{
+  "name": "didi-lens",
+  "private": true,
+  "description": "Marketplace de plugins do Claude Code",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test plugins/didi-trace/test/*.test.js"
+  }
+}
